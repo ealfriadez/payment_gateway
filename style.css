@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet');
+:root{
+    --main-color: #d90429;
+    --main-lighter-color: #ef233c;   
+    --light-color: #8d99ae;
+    --lighter-color: #edf2f4;
+    --dark-color: #2b2d42;
+
+    --font-smaller: 12px;
+    --font-bigger: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    background-color: #f9f5f5;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+strong{
+    font-weight: 800;    
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.outer{
+    margin-top: 5em;
+    border-radius: 1.8em;
+    padding: 4em 2em;
+    background-color: white;
+}
+header{
+    margin-bottom: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    font-size: 2em;
+}
+header .logo strong{
+    color: var(--main-lighter-color);
+}
+header .time-left{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    line-height: 1.2;
+}
+
+.payment, .payment :where(form > div:not(.card-number), .card-exp .input){
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 576px){
+    .outer{
+        padding: 4em;
+    }
+}
+
+@media screen and (min-width: 992px){
+    header{
+        max-width: 70%;
+        padding-right: 4em;
+        margin-bottom: 0;
+    }
+}
